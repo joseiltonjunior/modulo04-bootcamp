@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
+import TechItem from './TechItem';
 class TechList extends Component {
   state = {
     newTech: '',
     techs: [
-      'varrer o quarto',
-      'estudar'
+      'Estudar para o bootcamp',
+      'Estudar para a faculdade'
     ]
   };
 
@@ -30,20 +31,14 @@ class TechList extends Component {
 
     return (
       <div className="container">
-        <h1>Painel de tarefas</h1>
+        <h1>Painel de Tarefas</h1>
         <form onSubmit={this.handleSubmit}>
           <ul>
             {this.state.techs.map(tech => (
-              <li key={tech}>
-                {tech}
-                <button
-                  onClick={() => this.handleDelete(tech)}
-                  type="button"
-                  className="btn btn-danger"
-                >
-                  X
-                </button>
-              </li>
+              <TechItem
+                key={tech}
+                tech={tech}
+                onDelete={() => this.handleDelete(tech)} />
             ))}
           </ul>
           <input

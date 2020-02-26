@@ -6,9 +6,16 @@ body {
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 25px;
-  align-self: center;
 }
 
-div.button {
-  align-self: center;
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  
 }
+
+button#removeBtn {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
